@@ -1,0 +1,2 @@
+# scalaBasic
+learn by coding 
