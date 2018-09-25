@@ -1,1 +1,11 @@
-.idea
+logs
+target
+checkpoint
+/conf/fuelsdk.properties
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.sbtserver
+/.settings
+/.vagrant
