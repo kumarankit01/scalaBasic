@@ -9,3 +9,4 @@ checkpoint
 /.sbtserver
 /.settings
 /.vagrant
+/.idea/*
