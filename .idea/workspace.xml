@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc8b9e74-130a-43da-8821-de549378c040" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lecture/part2/Companion.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lecture/part2/Generics.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lecture/part2/Mylist.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lecture/part2/Anon.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lecture/part2/package.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,11 +16,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Mylist.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Mylist.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lecture/part2/Mylist.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
               <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lecture/part2/package.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Anon.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/lecture/part2/Anon.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" selection-start-line="25" selection-end-line="33" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -93,30 +110,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Option.scala" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ideaLibSources/scala-library-2.12.3-sources.jar!/scala/Option.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TraversableOnce.scala" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ideaLibSources/scala-library-2.12.3-sources.jar!/scala/collection/TraversableOnce.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4245">
-              <caret line="293" column="25" selection-start-line="293" selection-start-column="25" selection-end-line="293" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Package Object" />
       </list>
     </option>
   </component>
@@ -142,6 +142,7 @@
         <option value="$PROJECT_DIR$/src/lecture/part2/Companion.scala" />
         <option value="$PROJECT_DIR$/src/lecture/part2/Generics.scala" />
         <option value="$PROJECT_DIR$/src/lecture/part2/Mylist.scala" />
+        <option value="$PROJECT_DIR$/src/lecture/part2/Anon.scala" />
       </list>
     </option>
   </component>
@@ -242,9 +243,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ListTest">
+  <component name="RunManager" selected="Application.Anon">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration name="Anon" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="lecture.part2.Anon" />
+      <module name="scalaBasic" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lecture.part2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration name="Companion" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="lecture.part2.Companion" />
@@ -292,17 +304,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="syntaticSugar" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="lecture.part2.syntaticSugar" />
-      <module name="scalaBasic" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lecture.part2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -353,19 +354,19 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
     <list>
-      <item itemvalue="Application.syntaticSugar" />
       <item itemvalue="Application.Companion" />
       <item itemvalue="Application.ListTest" />
       <item itemvalue="Application.CreateAnagram" />
       <item itemvalue="Application.Generics" />
+      <item itemvalue="Application.Anon" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Anon" />
         <item itemvalue="Application.ListTest" />
         <item itemvalue="Application.Generics" />
         <item itemvalue="Application.CreateAnagram" />
         <item itemvalue="Application.Companion" />
-        <item itemvalue="Application.syntaticSugar" />
       </list>
     </recent_temporary>
   </component>
@@ -437,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538294713880</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Generics">
+      <created>1538889727790</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1538889727790</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -458,7 +466,7 @@
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.40683573" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.4707828" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.4707828" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3296582" />
       <window_info id="Designer" order="2" />
       <window_info anchor="bottom" id="Run with VisualVM" order="7" />
@@ -511,7 +519,8 @@
     <MESSAGE value="Expression and Function" />
     <MESSAGE value="CBN and CBV&#10;tail recursion" />
     <MESSAGE value="syntatic sugar&#10;operator overloading" />
-    <option name="LAST_COMMIT_MESSAGE" value="syntatic sugar&#10;operator overloading" />
+    <MESSAGE value="Generics" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generics" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -519,20 +528,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/time/temporal/TemporalAmount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/time/Duration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="195" lean-forward="true" selection-start-line="195" selection-end-line="195" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lecture/part2/Companion.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -869,6 +864,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lecture/part2/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lecture/part2/Anon.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="33" selection-end-column="3" />
         </state>
       </provider>
     </entry>
