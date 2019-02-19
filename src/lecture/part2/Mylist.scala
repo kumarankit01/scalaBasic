@@ -21,7 +21,7 @@ abstract class Mylist[+A] {
 
   def Map[B](transformer: A => B): Mylist[B]
 
-  def filter(myPredicate: A => Boolean): Mylist[A]
+  def withFilter(myPredicate: A => Boolean): Mylist[A]
 
   def flatMap[B](transformer: A => Mylist[B]): Mylist[B]
 
@@ -57,11 +57,11 @@ case class Node[+A](val value: A, val next: Mylist[A] = Empty) extends Mylist[A]
     new Node[B](transformer(value), next.Map(transformer))
   }
 
-  override def filter(myPredicate: A => Boolean): Mylist[A] = {
+  override def withFilter(myPredicate: A => Boolean): Mylist[A] = {
     if (myPredicate(value)) {
-      new Node[A](value, next.filter(myPredicate))
+      new Node[A](value, next.withFilter(myPredicate))
     } else {
-      next.filter(myPredicate)
+      next.withFilter(myPredicate)
     }
   }
 
@@ -113,7 +113,7 @@ case object Empty extends Mylist[Nothing] {
 
   override def Map[B](transformer: Nothing => B): Mylist[B] = Empty
 
-  override def filter(myPredicate: Nothing => Boolean): Mylist[Nothing] = Empty
+  override def withFilter(myPredicate: Nothing => Boolean): Mylist[Nothing] = Empty
 
   override def flatMap[B](transformer: Nothing => Mylist[B]): Mylist[B] = Empty
 
@@ -160,7 +160,11 @@ object ListTest extends App {
 
   println(with2.zipWith[String, String](listString, _ + "-" + _))
 
-  println(with3.fold(0)(_+_))
+  println(with3.fold(0)(_ + _))
+
+  for {
+    n <- with3 if (n % 2 == 0)
+  } println("ola -> " + n)
 
   /*  println(with3.filter(new MyPredicate[Int] {
       override def apply(t: Int): Boolean = t % 2 == 0
